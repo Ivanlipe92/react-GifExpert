@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 import { obtenerGifs } from "../helpers/obtenerGifs";
 
-
-
 export const useFetchGifs = (categoria) => {
 
     const [images, setImages] = useState([]);

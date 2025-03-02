@@ -1,4 +1,3 @@
-
 import { useState } from "react"
 import { NuevaCategoria, GridDeGifs } from "./components";
 
@@ -23,5 +22,8 @@ export const GifExpertApp = () => {
             }
         </>
     )
-    
 }
+
+
+
+

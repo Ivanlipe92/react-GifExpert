@@ -1,8 +1,9 @@
 import { useState } from "react"
+import PropTypes from "prop-types";
 
 
 export const NuevaCategoria = ({agregarNuevaCategoria}) => {
-    const [valorEntrada, setValorEntrada] = useState('')
+    const [valorEntrada, setValorEntrada] = useState('');
     const onEscribir = ({target}) => {
         setValorEntrada(target.value);
     }
@@ -14,8 +15,15 @@ export const NuevaCategoria = ({agregarNuevaCategoria}) => {
     }
 
   return (
-    <form onSubmit={onSubir}>
+    <form onSubmit={onSubir} aria-label="form">
         <input type="text" placeholder="Buscar Gifs" value={valorEntrada} onChange={event => onEscribir(event)}/>
     </form>
   )
 }
+
+NuevaCategoria.propTypes = {
+  agregarNuevaCategoria: PropTypes.func.isRequired,
+}
+
+
+
